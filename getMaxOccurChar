@@ -1,0 +1,28 @@
+''' Read input from STDIN. Print your output to STDOUT '''
+    #Use input() to read input from STDIN and use print to write your output to STDOUT
+
+def getMaxOccuringChar(n): 
+    ASCII_SIZE = 256 
+    count = [0] * ASCII_SIZE 
+  
+    max = -1
+    c = ""
+  
+    for i in str: 
+        count[ord(i)]+=1; 
+  
+    for i in str: 
+        if max < count[ord(i)]: 
+            max = count[ord(i)] 
+            c = i 
+  
+    return c  
+n = int(input())
+for i in range(n):
+    str = input()
+    print(getMaxOccuringChar(n))
+
+
+#input: xqwqwere
+#output: e
+#bcoz according to ASCII e COMES first
