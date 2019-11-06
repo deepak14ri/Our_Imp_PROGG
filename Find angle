@@ -1,0 +1,12 @@
+''' Read input from STDIN. Print your output to STDOUT '''
+    #Use input() to read input from STDIN and use print to write your output to STDOUT
+import math
+def main():
+    AB = int(input())
+    BC = int(input())
+    #a = math.hypot(AB,BC)
+    print(90-int(math.degrees(math.atan2(AB,BC))),end='')
+main()
+
+''' AB=BC=6
+agle = 45 '''
