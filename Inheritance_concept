@@ -17,8 +17,12 @@ class MarsRover(Rocket): # inheriting from the base class
 
 
 if __name__ == "__main__":
-    x = Rocket(name,distance) # or Rocket(input(),input())
+    x = Rocket("Our project","to reach till stratosphere ") # or Rocket(input(),input())
     y = MarsRover("mars_rover", "till Mars", "ISRO") # or MarsRover(input(),input(),input())
     print(x.launch())
     print(y.launch())
     print(y.get_maker())
+
+'''Our Project has to reached till stratosphere                                                                           
+mars_rover has reached till Mars                                                                                      
+mars_rover Launched by ISRO'''
