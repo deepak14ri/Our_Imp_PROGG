@@ -6,7 +6,7 @@ class Rocket:
     def launch(self):
         return "%s has reached %s" % (self.name, self.distance)
 
-
+#Inheritance
 class MarsRover(Rocket): # inheriting from the base class
     def __init__(self, name, distance, maker):
         Rocket.__init__(self, name, distance)
@@ -14,8 +14,23 @@ class MarsRover(Rocket): # inheriting from the base class
 
     def get_maker(self):
         return "%s Launched by %s" % (self.name, self.maker)
+        
+#Composite fuction
+class MarsRoverComp():
+    def __init__(self, name, distance, maker):
+        self.rocket = Rocket(name, distance) # instantiating the base
+
+        self.maker = maker
+
+    def get_maker(self):
+        return "%s Launched by %s" % (self.rocket.name, self.maker)
 
 
+if __name__ == "__main__":
+    z = MarsRover("mars_rover2", "till Mars", "ISRO")
+    print(z.launch())
+    print(z.get_maker())
+    
 if __name__ == "__main__":
     x = Rocket("Our project","to reach till stratosphere ") # or Rocket(input(),input())
     y = MarsRover("mars_rover", "till Mars", "ISRO") # or MarsRover(input(),input(),input())
@@ -25,4 +40,6 @@ if __name__ == "__main__":
 
 '''Our Project has to reached till stratosphere                                                                           
 mars_rover has reached till Mars                                                                                      
+mars_rover Launched by ISRO
+mars_rover has reached till Mars
 mars_rover Launched by ISRO'''
